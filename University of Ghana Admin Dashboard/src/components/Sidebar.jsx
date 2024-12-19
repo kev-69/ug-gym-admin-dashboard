@@ -7,7 +7,7 @@ const Sidebar = () => {
   // Handle the logout process
   const handleLogout = () => {
     localStorage.removeItem("adminToken"); // Remove the admin token from localStorage
-    navigate('/login'); // Redirect the user to the login page (adjust the path if needed)
+    navigate('/'); // Redirect the user to the login page (adjust the path if needed)
   };
 
   return (
