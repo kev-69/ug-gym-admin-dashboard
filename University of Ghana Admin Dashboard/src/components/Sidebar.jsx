@@ -1,7 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
+  // Handle the logout process
+  const handleLogout = () => {
+    localStorage.removeItem("adminToken"); // Remove the admin token from localStorage
+    navigate('/login'); // Redirect the user to the login page (adjust the path if needed)
+  };
+
   return (
     <div className="w-64 bg-gray-800 text-white h-screen p-4 flex flex-col justify-between">
       <div>
@@ -15,7 +23,9 @@ const Sidebar = () => {
       <div>
         <ul>
           <li>
-            <Link to="/" className="block py-2 px-4 rounded hover:bg-gray-700">Logout</Link>
+            <button onClick={handleLogout} className="block py-2 px-4 rounded hover:bg-gray-700 w-full text-left">
+              Logout
+            </button>
           </li>
         </ul>
       </div>
