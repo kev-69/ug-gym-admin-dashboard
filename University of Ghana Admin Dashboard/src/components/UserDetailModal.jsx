@@ -49,7 +49,7 @@ const UserDetailsModal = ({ userId, onClose, onUpdateStatus }) => {
           },
         }
       );
-      onUpdateStatus(userId, { status: 'true', startDate, endDate });
+      onUpdateStatus(userId, { status: true, startDate, endDate });
       onClose();
     } catch (err) {
       setError('Error updating subscription.');
