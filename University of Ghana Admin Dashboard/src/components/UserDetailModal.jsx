@@ -13,7 +13,7 @@ const UserDetailsModal = ({ userId, onClose, onUpdateStatus }) => {
     const fetchUserData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:4000/api/admins/users/${userId}`, {
+        const response = await axios.get(`https://ug-gym-backend.onrender.com/api/admins/users/${userId}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
           },
@@ -37,7 +37,7 @@ const UserDetailsModal = ({ userId, onClose, onUpdateStatus }) => {
 
     try {
       await axios.patch(
-        `http://localhost:4000/api/admins/users/${userId}/status`,
+        `https://ug-gym-backend.onrender.com/api/admins/users/${userId}/status`,
         {
           status: true,
           startDate,

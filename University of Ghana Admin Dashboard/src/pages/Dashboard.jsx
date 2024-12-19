@@ -14,7 +14,7 @@ const Dashboard = () => {
     setError("");  // Clear previous errors
 
     try {
-      const response = await fetch("http://localhost:4000/api/admins/all-users", {
+      const response = await fetch("https://ug-gym-backend.onrender.com/api/admins/all-users", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
