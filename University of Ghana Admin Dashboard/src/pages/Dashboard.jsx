@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../components/Sidebar';
 import UserDetailModal from '../components/UserDetailModal';
+import { Helmet } from "react-helmet";
+
 
 const Dashboard = () => {
   const [users, setUsers] = useState([]);  // State to store fetched users
@@ -68,6 +70,9 @@ const Dashboard = () => {
 
   return (
     <div className="flex">
+      <Helmet>
+          <title>Dashboard</title>
+      </Helmet>
       <Sidebar />
       <div className="flex-1 p-6">
         <h1 className="text-3xl font-bold text-gray-700">Dashboard</h1>
