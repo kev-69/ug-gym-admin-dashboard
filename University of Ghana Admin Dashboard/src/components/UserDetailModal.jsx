@@ -162,13 +162,17 @@ const UserDetailsModal = ({ userId, onClose, onUpdateStatus }) => {
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Start Date</h4>
                     <p className="mt-1 text-gray-900">
-                      {new Date(user.subscription.startDate).toLocaleDateString()}
+                      {user.subscription.endDate
+                        ? new Date(user.subscription.endDate).toLocaleDateString()
+                        : "Not available"}
                     </p>
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">End Date</h4>
                     <p className="mt-1 text-gray-900">
-                      {new Date(user.subscription.endDate).toLocaleDateString()}
+                      {user.subscription.startDate
+                        ? new Date(user.subscription.startDate).toLocaleDateString()
+                        : "Not available"}
                     </p>
                   </div>
                   <div>
