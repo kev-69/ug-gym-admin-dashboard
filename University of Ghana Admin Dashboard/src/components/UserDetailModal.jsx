@@ -152,7 +152,7 @@ const UserDetailsModal = ({ userId, onClose, onUpdateStatus }) => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Plan</h4>
-                    <p className="mt-1 text-gray-900 capitalize">{subscription.package} Plan</p>
+                    <p className="mt-1 text-gray-900 capitalize">{subscription.package}</p>
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500">Price</h4>
